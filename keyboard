@@ -1,0 +1,10 @@
+#!/bin/bash
+if [[ $1 == "-d" ]]; then
+xinput float "AT Translated Set 2 keyboard"
+echo "Keyboard Disabled"
+elif [[ $1 == "-e" ]]; then
+xinput reattach "AT Translated Set 2 keyboard" "Virtual core keyboard"
+echo "Keyboard Enabled"
+else
+echo "Incorrect Arguments -d, we are accepted"
+fi
